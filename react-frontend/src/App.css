@@ -1,0 +1,72 @@
+/* 初期状態のメニュー */
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  font-size: 24px;
+  transition: all 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+/* スクロール後のメニュー */
+.menu.scrolled {
+  padding: 10px;
+  font-size: 18px;
+}
+
+/* メインコンテンツ */
+main {
+  margin-top: 80px;
+  padding: 20px;
+  font-size: 16px;
+  line-height: 1.6;
+}
+/* ---------------------------------------------
+
+グローバルメニュー
+
+------------------------------------------------ */
+#global-nav {
+  background: #fff;
+  width: 100%;
+  padding: 10px; /* 必要なら余白を追加 */
+}
+#global-nav.m_fixed {
+  left: 0;
+  position: fixed;
+  top: 0;
+}
+
+#global-nav .menu {
+  display: flex; /* Flexboxで横並びにする */
+  justify-content: center; /* 必要に応じて中央揃え */
+  list-style: none; /* リストマーカーを削除 */
+  margin: 0; /* デフォルトのマージンをリセット */
+  padding: 0; /* デフォルトのパディングをリセット */
+}
+
+#global-nav .menu li {
+  margin: 0 15px; /* 各メニュー間のスペース */
+}
+
+#global-nav .menu a {
+  text-decoration: none; /* アンダーラインを削除 */
+  color: #fff1f1; /* 必要ならテキスト色を変更 */
+  font-weight: bold; /* 必要ならフォントスタイルを変更 */
+  transition: color 0.3s; /* ホバー時のエフェクト */
+}
+
+#global-nav .menu a:hover {
+  color: #007BFF; /* ホバー時の色変更 */
+}
+
+/* スクロール時に非表示 */
+header.menu.scrolled {
+  transform: translateY(-100%); /* ヘッダーを上に隠す */
+}
+
